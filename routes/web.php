@@ -23,6 +23,11 @@ use App\Http\Controllers\HistoryController;
 
 
 Route::middleware('auth')->group(function () {
+    Route::get('/', function ()
+    {
+        return view('login');
+    })->name('home');
+
     Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -64,6 +69,7 @@ Route::middleware('auth')->group(function () {
     Route::get('petugas/pembayaran/delete/{id}', [PembayaranPetugasController::class, 'destroy'])->name('pembayaran.petugas.delete');
 
     Route::get('/pembayaran/detail/cetak/{id}', [PembayaranController::class, 'cetak'])->name('pembayaran.cetak');
+
 
 
 

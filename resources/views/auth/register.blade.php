@@ -137,15 +137,35 @@
               </div>
             </div> --}}
             <div class="card-body">
-              <form role="form">
+              <form role="form" method="POST" action="{{ route('register') }}">
+                @csrf
                 <div class="mb-3">
-                  <input type="text" name="name" class="form-control" placeholder="Name" aria-label="Name">
+                  <input id="name" type="text" name="name" :value="old('name')" required class="form-control" placeholder="Name" aria-label="Name">
                 </div>
                 <div class="mb-3">
-                  <input type="email" name="email" class="form-control" placeholder="Email" aria-label="Email">
+                  <input id="email" type="email" name="email" :value="old('email')" required class="form-control" placeholder="Email" aria-label="Email">
                 </div>
                 <div class="mb-3">
-                  <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Password">
+                    <input id="nisn" type="text" name="nisn" :value="old('nisn')" required class="form-control" placeholder="Nisn" aria-label="nisn">
+                </div>
+                <div class="mb-3">
+                    <input id="nis" type="text" name="nis" :value="old('nis')" required class="form-control" placeholder="Nis" aria-label="nis">
+                </div>
+                <div class="mb-3">
+                    <div class="form-group">
+                        <select class="form-select" name="id_kelas" id="id_kelas">
+                            <option selected class="text">-- Pilih Kelas --</option>
+                            @foreach ($kelas as $dapat)
+                                <option value="{{ $dapat->id }}">{{ $dapat->kelas }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <input id="no_telp" type="text" name="no_telp" :value="old('no_telp')" required class="form-control" placeholder="nomor telepon" aria-label="Name">
+                </div>
+                <div class="mb-3">
+                  <input id="password" type="password" name="password" :value="old('password')" class="form-control" placeholder="Password" aria-label="Password">
                 </div>
                 <div class="text-center">
                   <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Register</button>

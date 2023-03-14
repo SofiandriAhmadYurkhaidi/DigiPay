@@ -5,7 +5,7 @@
     <div class="row mb-3">
         <div class="card">
 				<form action="{{ route('petugas.tambah') }}" method="post">
-                     @csrf
+                  @csrf
 					<div class="card-header">
 						<h4 class="card-title">Tambah Petugas</h4>
                     </div>
@@ -29,21 +29,21 @@
 									<input type="password" name="password" id="password" class="form-control" placeholder="Masukan Password">
 								</div>
 							</div>
-                            <div class="col-xs-12 col-sm-3">
+                             <div class="col-xs-12 col-sm-3">
                                 <div class="form-group">
 									<label for="no_telp">No. Telepon : </label>
 									<input type="number" name="no_telp" id="no_telp" class="form-control" placeholder="Masukan No. Telp">
 								</div>
 							</div>
-                            <div class="col-xs-12 col-sm-8 mt-1">
-                                <div class="form-group">
+                           <div class="col-xs-12 col-sm-8 mt-1">
+                                 <div class="form-group">
 									<label for="alamat">Alamat : </label>
 									<input type="text" name="alamat" id="alamat" class="form-control" placeholder="Masukan Alamat">
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-3 mt-2">
-                                <br>
-                                <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i> Tambah </button>
+                            <br>
+                             <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i> Tambah </button>
 							</div>
 					    </div>
 				    </div>
@@ -98,7 +98,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="editModalLabel">Edit item</h5>
+        <h5 class="modal-title" id="editModalLabel">Edit Petugas</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use App\Models\siswa;
+use App\Models\Siswa;
 use App\Models\Kelas;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
