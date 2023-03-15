@@ -7,6 +7,7 @@ use App\Models\Kelas;
 use App\Models\Spp;
 use App\Models\Siswa;
 use App\Models\Petugas;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -31,12 +32,14 @@ class HomeController extends Controller
         $spp = Spp::count();
         $siswa = Siswa::count();
         $petugas = Petugas::count();
+        $data_petugas = User::where('level', 'petugas')->get();
 
         return view('dashboard', [
             'kelas' => $kelas,
             'spp' => $spp,
             'siswa' => $siswa,
-            'petugas' => $petugas
+            'petugas' => $petugas,
+            'data_petugas' => $data_petugas
         ]);
 
 

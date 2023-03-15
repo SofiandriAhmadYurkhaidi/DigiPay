@@ -14,7 +14,7 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive text-nowrap">
-                  <table class="table">
+                  <table id="tablePembayaran" class="table">
                     <thead class="table-light">
                       <tr>
                         <th>No</th>
@@ -102,8 +102,13 @@
             </div>
 
             <div class="form-group my-1">
-                <label for="jumlah_bayar">Jumlah Bayar :</label>
-                <input type="text" class="form-control" id="jumlah_bayar" name="jumlah_bayar"  required placeholder="Masukan jumlah bayar">
+                <label for="nominal">Jumlah Bayar :</label>
+                <select class="form-select" name="jumlah_bayar">
+                    <option selected>-- Pilih Jumlah --</option>
+                    @foreach ($spp as $get )
+                        <option value="{{ $get->nominal }}">{{ $get->nominal }}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
         <div class="modal-footer">

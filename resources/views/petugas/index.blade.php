@@ -10,7 +10,7 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive text-nowrap">
-                  <table class="table">
+                  <table id="tablePembayaran" class="table">
                     <thead class="table-light">
                       <tr>
                         <th>No</th>

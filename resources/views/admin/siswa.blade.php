@@ -81,8 +81,8 @@
       <div class="col-lg-12 mb-4 order-0">
         <div class="card">
             <h5 class="card-header">Siswa</h5>
-            <div class="table-responsive text-nowrap">
-              <table class="table">
+            <div class="table-responsive text-nowrap m-5">
+              <table id="tableSiswa" class="table">
                 <thead class="table-light">
                   <tr>
                     <th>No</th>
@@ -188,3 +188,5 @@
 
 
 @endsection
+
+

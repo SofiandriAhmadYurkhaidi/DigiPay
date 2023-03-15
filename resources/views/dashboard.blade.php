@@ -91,5 +91,36 @@
       </div>
     </div>
 
+    <div class="row mt-5">
+        <div class="col-lg-12 mb-4 order-0">
+          <div class="card">
+              <h5 class="card-header">Petugas</h5>
+              <div class="table-responsive text-nowrap">
+                <table class="table">
+                  <thead class="table-light">
+                    <tr>
+                      <th>No</th>
+                      <th>Nama</th>
+                      <th>Email</th>
+                      <th>No. Telepon</th>
+                      <th>Alamat</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-border-bottom-0">
+                    @foreach ($data_petugas as $key => $user )
+                      <tr>
+                        <td>{{ $key +1 }}</td>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{ $user->name }}</strong></td>
+                        <td>{{ $user->email }}</td>
+                        <td>{{ $user->petugas->no_telp }}</td>
+                        <td>{{ $user->petugas->alamat  }}</td>
+                      </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+
 
 @endsection

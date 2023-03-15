@@ -35,6 +35,8 @@
   <link href="{{url('/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="{{url('/assets/css/argon-dashboard.css?v=2.0.4')}}" rel="stylesheet" />
+
+  <link rel="stylesheet" href="{{url('https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css')}}">
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -238,6 +240,26 @@
   <script async defer src="{{url('https://buttons.github.io/buttons.js')}}"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="{{url('/assets/js/argon-dashboard.min.js?v=2.0.4')}}"></script>
+  <script src="{{url('https://code.jquery.com/jquery-3.5.1.js')}}"></script>
+  <script src="{{url('https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js')}}"></script>
+
+  <script>
+    $(document).ready(function () {
+        $('#tableSiswa').DataTable();
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#tablePetugas').DataTable();
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#tablePembayaran').DataTable();
+    });
+</script>
 </body>
 
 </html>

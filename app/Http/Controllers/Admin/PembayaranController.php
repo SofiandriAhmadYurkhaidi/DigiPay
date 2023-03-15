@@ -39,7 +39,7 @@ class PembayaranController extends Controller
             'tanggal_bayar' => $request->tanggal_bayar,
             'bulan_bayar' => $request->bulan_bayar,
             'tahun_bayar' => $request->tahun_bayar,
-            'jumlah_bayar' => $request->jumlah_bayar,
+            'jumlah_bayar' => $request->jumlah_bayar
         ]);
 
         return back();
