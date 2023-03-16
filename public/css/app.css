@@ -754,6 +754,9 @@ select {
 .m-3 {
   margin: 0.75rem;
 }
+.m-5 {
+  margin: 1.25rem;
+}
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;

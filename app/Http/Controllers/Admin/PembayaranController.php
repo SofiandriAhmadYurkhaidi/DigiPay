@@ -70,7 +70,7 @@ class PembayaranController extends Controller
     	$pdf = PDF::loadview('admin.detail_pembayaran_pdf', [
             'pembayaran'=> $pembayaran,
         ]);
-    	return $pdf->download('detail_pembayaran_pdf.pdf');
+    	return $pdf->download('laporan_pembayaran.pdf');
     }
 }
 

@@ -21,6 +21,7 @@
                         <th>Kelas</th>
                         <th>Tahun Bayar</th>
                         <th>Bulan Bayar</th>
+                        <th>Tanggal Bayar</th>
                         <th>Jumlah Bayar</th>
                         <th>Aksi</th>
                       </tr>
@@ -35,6 +36,7 @@
                           <td>{{ $item->siswa->kelas->kelas }}</td>
                           <td>{{ $item->tahun_bayar  }}</td>
                           <td>{{ $item->bulan_bayar }}</td>
+                          <td>{{ $item->tanggal_bayar }}</td>
                           <td>{{ $item->jumlah_bayar }}</td>
                           <td>
                               <a href="{{ route('pembayaran.petugas.delete', $item->id) }}"><i class="text-danger bx bx-trash me-1"></i> </a>

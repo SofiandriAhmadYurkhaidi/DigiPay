@@ -25,6 +25,7 @@
                         <th>Petugas</th>
                         <th>Tahun Bayar</th>
                         <th>Bulan Bayar</th>
+                        <th>Tanggal Bayar</th>
                         <th>Jumlah Bayar</th>
                         <th>Aksi</th>
                       </tr>
@@ -40,6 +41,7 @@
                           <td>{{ $item->petugas->name }}</td>
                           <td>{{ $item->tahun_bayar  }}</td>
                           <td>{{ $item->bulan_bayar }}</td>
+                          <td>{{ $item->tanggal_bayar }}</td>
                           <td>{{ $item->jumlah_bayar }}</td>
                           <td>
                               <a class="btn btn-danger btn-sm" href="{{ route('pembayaran.delete', $item->id) }}">Hapus</a>
